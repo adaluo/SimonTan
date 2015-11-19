@@ -1,0 +1,41 @@
+﻿
+.margin-bottom-sm {
+margin-bottom: 5px !important;
+}
+.margin-top-sm {
+margin-top: 5px !important;
+}
+
+
+form input.ng-invalid-pattern,
+form input.ng-invalid-match
+{
+  background-color:lightpink;
+
+}
+
+form button[disabled]:hover,
+form input[disabled]:hover
+{
+  cursor:not-allowed;
+}
+
+.toast-bottom-right {
+  bottom: 50px; /* move it above footer */
+}
+
+.vis-hidden{
+  visibility: hidden;
+}
+
+.ui-view-container {
+  margin-top: 50px;
+}
+
+
+.langImage {
+  margin-right:15px;
+  width: 15px;
+  height: 15px;
+  cursor:pointer;
+}
