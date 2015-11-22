@@ -17,7 +17,9 @@ module app {
          */
         'app.layout',
         'app.useraccount',
-        'app.test'        
+        'app.test',
+        'app.about',
+        'app.listings'            
     ]);
 
 }

@@ -76,3 +76,14 @@ INSERT INTO [dbo].[AspNetRoles] ([Name])  VALUES ('Admin')
 INSERT INTO [dbo].[AspNetRoles] ([Name])  VALUES ('Test')
 
 GO
+
+
+INSERT INTO [dbo].[AspNetUsers] ([Email],[EmailConfirmed],[PasswordHash],[SecurityStamp],[PhoneNumber],[PhoneNumberConfirmed],[TwoFactorEnabled],[LockoutEndDateUtc],[LockoutEnabled],[AccessFailedCount],[UserName])
+     VALUES('miticv@gmail.com',0,'AMAAeglsP9Er115Yo5g2GyxRhyxvII9zxA7xajQh/pdpWVnark+oNu0ytrtBNoed4Q==','35001d6c-94a0-4527-9cec-a6a97637477f',NULL,0,0,NULL,1,0,'miticv@gmail.com')
+GO
+
+
+INSERT INTO [dbo].[Resources]
+           ([ResourceCode],[ResourceGroup],[English],[Chinese],[SerbianLatin],[Serbian],[Italian],[CreateDate],[CreatedBy],[LastUpdateDate],[LastUpdatedBy])
+     VALUES
+           ('Language','Language','Languahen' 'English', 'Languahe chinese','Languahe Serbian','Languahe Serbian cyr','Languahe Italian','2001/1/1',1,'2001/1/1',1);

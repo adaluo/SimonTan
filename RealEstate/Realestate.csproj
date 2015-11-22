@@ -145,6 +145,12 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\listings\listings.module.ts" />
+    <TypeScriptCompile Include="app\listings\config.route.ts" />
+    <TypeScriptCompile Include="app\listings\controllers.ts" />
+    <TypeScriptCompile Include="app\about\config.route.ts" />
+    <TypeScriptCompile Include="app\about\controllers.ts" />
+    <TypeScriptCompile Include="app\about\about.module.ts" />
     <TypeScriptCompile Include="app\blocks\cache\cache.module.ts" />
     <TypeScriptCompile Include="app\blocks\exception\apiError.ts" />
     <TypeScriptCompile Include="app\blocks\exception\exception.module.ts" />
@@ -161,6 +167,8 @@
     <TypeScriptCompile Include="app\core\constants.ts" />
     <TypeScriptCompile Include="app\core\core.module.ts" />
     <TypeScriptCompile Include="app\App.ts" />
+    <Content Include="app\listings\Listings.html" />
+    <Content Include="app\about\About.html" />
     <Content Include="app\layout\footer.html" />
     <Content Include="app\layout\header.html" />
     <Content Include="app\layout\layout.html" />

@@ -1,0 +1,15 @@
+
+
+INSERT INTO Resources (ResourceCode,ResourceGroup,English,Chinese,SerbianLatin,Serbian,Italian,CreateDate,CreatedBy,LastUpdateDate,LastUpdatedBy)
+     VALUES('Language','Language','Languahen' 'English', 'Languahe chinese','Languahe Serbian','Languahe Serbian cyr','Languahe Italian','2001-01-01 00:00:00.000000',1,'2001-01-01 00:00:00.000000',1);
+	  
+INSERT INTO AspNetUsers (Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName)
+     VALUES('miticv@gmail.com',0,'AMAAeglsP9Er115Yo5g2GyxRhyxvII9zxA7xajQh/pdpWVnark+oNu0ytrtBNoed4Q==','35001d6c-94a0-4527-9cec-a6a97637477f',NULL,0,0,NULL,1,0,'miticv@gmail.com');
+
+INSERT INTO Clients (Id ,Secret,Name,ApplicationType,Active,RefreshTokenLifeTime,AllowedOrigin)
+     VALUES ('app','if7MXRQfo6ZO0zx/D2cEiX+DsSKMKwrhAl1ImZRJgGQ=','AngularJs Front End Applicatrion (non confidential)', 0, 1, 7200, 'http://localhost:59690/');
+          
+INSERT INTO Clients (Id ,Secret,Name,ApplicationType,Active,RefreshTokenLifeTime,AllowedOrigin)
+     VALUES ('consoleApp','if7MXRQfo6ZO0zx/D2cEiX+DsSKMKwrhAl1ImZRJgGQ=','Console App (confidential)', 1, 0, 14400, '*');
+INSERT INTO AspNetRoles (Name)  VALUES ('Admin');
+INSERT INTO AspNetRoles (Name)  VALUES ('Test');

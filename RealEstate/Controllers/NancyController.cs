@@ -13,8 +13,8 @@ namespace Realestate.Controllers
     {
         public NancyController()
         {
-            Get["/"] = p => View["Views/Home/Home.cshtml", new TestModel() { Name = "hola" }]; //{ return "hi!"; }; 
-            Get["/test"] = p => View["Views/Test/Home.cshtml", new TestModel() { Name = "hola" }]; //{ return "hi!"; };   
+            Get["/"] = p => View["Views/Test/Home.cshtml", new TestModel() { Name = "hola" }]; //{ return "hi!"; };   
+            Get["/home"] = p => View["Views/Home/Home.cshtml", new TestModel() { Name = "hola" }]; //{ return "hi!"; }; 
             Get["/testrunner"] = p => View["Views/Jasmine/SpecRunner.cshtml"]; 
 
         }

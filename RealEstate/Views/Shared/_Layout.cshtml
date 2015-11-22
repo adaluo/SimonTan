@@ -13,17 +13,22 @@
   <link href="~/Content/app/site.css" rel="stylesheet" />
   <link href="~/Content/animate.min.css" rel="stylesheet" />
 
-
-  <link type="text/css" rel="stylesheet" href="~/Content/js/rs-plugin/css/settings.css" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+<style>
+  .styler_color, .styler_hover_color:hover, .styler_parent_active.active > .styler_active_color {
+    color: #a1a64a !important;
+  }
+</style>
   <link type="text/css" rel="stylesheet" href="~/Content/css/style.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/font-awesome.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/media.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/owl.carousel.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/owl.theme.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/royalslider.css" />
-  <link type="text/css" rel="stylesheet" href="~/Content/css/rs-default.css" />  
+  @*<link type="text/css" rel="stylesheet" href="~/Content/js/rs-plugin/css/settings.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="~/Content/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/media.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/owl.carousel.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/owl.theme.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/royalslider.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/css/rs-default.css" />*@
 </head>
 <body>
 
@@ -53,16 +58,16 @@
   <script src="~/Scripts/angular-ui/ui-utils.min.js"></script>
 
 
-  <script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-  <script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-  <script type="text/javascript" src="~/Content/js/jquery.carouFredSel-6.2.1.js"></script>
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript" src="~/Content/js/jquery.easy-pie-chart.js"></script>
-  <script type="text/javascript" src="~/Content/js/library.js"></script>
-  <script type="text/javascript" src="~/Content/js/function.js"></script>
-  <script type="text/javascript" src="~/Content/js/mail_validation.js"></script>
-  <script type="text/javascript" src="~/Content/js/owl.carousel.min.js"></script>
-  <script type="text/javascript" src="~/Content/js/jquery.royalslider.min.js"></script>  
+  @*<script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.carouFredSel-6.2.1.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.easy-pie-chart.js"></script>
+    <script type="text/javascript" src="~/Content/js/library.js"></script>
+    <script type="text/javascript" src="~/Content/js/function.js"></script>
+    <script type="text/javascript" src="~/Content/js/mail_validation.js"></script>
+    <script type="text/javascript" src="~/Content/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.royalslider.min.js"></script>*@
 
 
 
@@ -109,15 +114,23 @@
   <script src="~/app/test/config.route.js"></script>
   <script src="~/app/test/controllers.js"></script>
 
+  <script src="~/app/about/about.module.js"></script>
+  <script src="~/app/about/config.route.js"></script>
+  <script src="~/app/about/controllers.js"></script>
+
+  <script src="~/app/listings/listings.module.js"></script>
+  <script src="~/app/listings/config.route.js"></script>
+  <script src="~/app/listings/controllers.js"></script>
+
   <script src="~/app/layout/layout.module.js"></script>
   <script src="~/app/layout/controllers.js"></script>
 
   <script>
 
     //Here is the value of the view model Name: @Model.Name
-    //$(document).ready(function () {
-    //  angular.bootstrap(document, ['app']);
-    //});
+    $(document).ready(function () {
+      angular.bootstrap(document, ['app']);
+    });
 
   </script>
 

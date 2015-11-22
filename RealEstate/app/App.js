@@ -8,7 +8,9 @@ var app;
         'app.widgets',
         'app.layout',
         'app.useraccount',
-        'app.test'
+        'app.test',
+        'app.about',
+        'app.listings'
     ]);
 })(app || (app = {}));
 //# sourceMappingURL=App.js.map
