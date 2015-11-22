@@ -11,7 +11,7 @@ namespace UnitTest
     using System.Net.Http;
     using System.Collections.Generic;
     using ServiceStack.Text;
-    using OwinAngularBoilerplate.Models;
+    using Realestate.Models;
     using UnitTest.Models;
 
     [TestClass]

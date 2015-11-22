@@ -72,9 +72,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OwinAngularBoilerplate\OwinAngularBoilerplate.csproj">
+    <ProjectReference Include="..\RealEstate\Realestate.csproj">
       <Project>{dae614e2-1266-4ec5-9b27-6ca5bb8e4bb9}</Project>
-      <Name>OwinAngularBoilerplate</Name>
+      <Name>Realestate</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
