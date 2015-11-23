@@ -84,10 +84,11 @@ module app {
                     stateExist = true;                    
             });
 
-            if (!stateExist ) {
-                logger.warning('"' + path.replace('/', '') + '" page is not found!');
-                $location.replace().path($rootScope.currentUrl || '/'); /* rewrite path to last known url */
-            }
+            //fix because /listing/1 shows as no page found?
+            //if (!stateExist ) {
+            //    logger.warning('"' + path.replace('/', '') + '" page is not found!');
+            //    $location.replace().path($rootScope.currentUrl || '/'); /* rewrite path to last known url */
+            //}
             //#endregion
 
         });

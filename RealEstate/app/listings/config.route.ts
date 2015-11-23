@@ -14,10 +14,16 @@ module app.listings {
 
         $stateProvider.
             state("listings", {
-            url: '/listings',
-            controller: 'app.listings.ListingsController',
-            controllerAs: 'listings',
-            templateUrl: '/app/listings/Listings.html',
+                url: '/listings',
+                controller: 'app.listings.ListingsController',
+                controllerAs: 'listings',
+                templateUrl: '/app/listings/Listings.html',
+            })
+            .state("listing", {
+                url: '/listing/{id:[0-9]*}',
+                controller: 'app.listings.ListingController',
+                controllerAs: 'listing',
+                templateUrl: '/app/listings/Listing.html',
             });
     }
 

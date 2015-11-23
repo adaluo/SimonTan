@@ -167,11 +167,13 @@
     <TypeScriptCompile Include="app\core\constants.ts" />
     <TypeScriptCompile Include="app\core\core.module.ts" />
     <TypeScriptCompile Include="app\App.ts" />
+    <Content Include="app\listings\Listing.html" />
     <Content Include="app\listings\Listings.html" />
     <Content Include="app\about\About.html" />
     <Content Include="app\layout\footer.html" />
     <Content Include="app\layout\header.html" />
     <Content Include="app\layout\layout.html" />
+    <Content Include="app\listings\ListingsItem.html" />
     <Content Include="app\useraccount\login.html" />
     <Content Include="app\test\test.html" />
     <Content Include="app\useraccount\register.html" />
