@@ -1,4 +1,4 @@
-﻿/// <reference path="../../_all.ts" />
+/// <reference path="../../_all.ts" />
 var app;
 (function (app) {
     var ApiErrorMessage = (function () {
@@ -7,7 +7,6 @@ var app;
         return ApiErrorMessage;
     })();
     app.ApiErrorMessage = ApiErrorMessage;
-
     var ApiErrorHelper = (function () {
         function ApiErrorHelper() {
             /* returns array of "model name", "error message" */
@@ -16,6 +15,7 @@ var app;
                 if (data.ModelState) {
                     for (var property in data.ModelState) {
                         if (data.ModelState.hasOwnProperty(property)) {
+                            // do stuff
                             for (var i = 0; data.ModelState[property].length > i; i++) {
                                 var el = new app.ApiErrorMessage();
                                 el.modelName = property;
@@ -24,7 +24,8 @@ var app;
                             }
                         }
                     }
-                } else if (data.error_description) {
+                }
+                else if (data.error_description) {
                     var el = new app.ApiErrorMessage();
                     el.modelName = data.error;
                     el.modelError = data.error_description;
@@ -36,21 +37,18 @@ var app;
         return ApiErrorHelper;
     })();
     app.ApiErrorHelper = ApiErrorHelper;
-
     var ApiError = (function () {
         function ApiError() {
         }
         return ApiError;
     })();
     app.ApiError = ApiError;
-
     var ApiErrorModel = (function () {
         function ApiErrorModel() {
         }
         return ApiErrorModel;
     })();
     app.ApiErrorModel = ApiErrorModel;
-
     var ApiErrorModelState = (function () {
         function ApiErrorModelState() {
         }
@@ -58,4 +56,4 @@ var app;
     })();
     app.ApiErrorModelState = ApiErrorModelState;
 })(app || (app = {}));
-//# sourceMappingURL=apiError.js.map
+//# sourceMappingURL=apierror.js.map

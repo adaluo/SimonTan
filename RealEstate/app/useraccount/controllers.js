@@ -1,7 +1,8 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var useraccount;
     (function (useraccount) {
         var UserController = (function () {
             function UserController(scope, accountService, logger, location, NotifyingCache, $i18next) {
@@ -60,7 +61,6 @@ var app;
                 };
                 var self = this;
                 self.working = false;
-
                 self.dataSvc = accountService;
                 self.logger = logger;
                 self.location = location;
@@ -71,8 +71,7 @@ var app;
             return UserController;
         })();
         useraccount.UserController = UserController;
-    })(app.useraccount || (app.useraccount = {}));
-    var useraccount = app.useraccount;
+    })(useraccount = app.useraccount || (app.useraccount = {}));
 })(app || (app = {}));
 angular.module('app.useraccount').controller('userController', app.useraccount.UserController);
 //# sourceMappingURL=controllers.js.map

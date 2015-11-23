@@ -1,7 +1,7 @@
-﻿/*
-* Typescript files that do not encapsulate any class or interface
-* do not need to be included in here
-*/
+/*
+ * Typescript files that do not encapsulate any class or interface
+ * do not need to be included in here
+ */
 //#######  libraries  #######
 /// <reference path="../scripts/typings/jquery/jquery.d.ts" />
 /// <reference path="../scripts/typings/angularjs/angular.d.ts" />

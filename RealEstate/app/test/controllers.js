@@ -1,13 +1,13 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var test;
     (function (test) {
         var TestController = (function () {
             function TestController(logger) {
                 var self = this;
                 self.logger = logger;
-
                 logger.info("Test Info message", "Info");
                 logger.success("Test Success message", "Success");
                 logger.warning("Test Warning message", "Warning");
@@ -18,8 +18,7 @@ var app;
             return TestController;
         })();
         test.TestController = TestController;
-    })(app.test || (app.test = {}));
-    var test = app.test;
+    })(test = app.test || (app.test = {}));
 })(app || (app = {}));
 angular.module('app.test').controller('testController', app.test.TestController);
 //# sourceMappingURL=controllers.js.map

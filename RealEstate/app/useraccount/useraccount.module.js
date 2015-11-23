@@ -1,10 +1,10 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var useraccount;
     (function (useraccount) {
         angular.module('app.useraccount', []);
-    })(app.useraccount || (app.useraccount = {}));
-    var useraccount = app.useraccount;
+    })(useraccount = app.useraccount || (app.useraccount = {}));
 })(app || (app = {}));
 //# sourceMappingURL=useraccount.module.js.map

@@ -1,1 +1,1 @@
-{"version":3,"file":"logger.module.js","sourceRoot":"","sources":["logger.module.ts"],"names":["app"],"mappings":"AAAA,sCAAsC;AAEtC,YAAY;AACZ,IAAO,GAAG;AAIT,CAJD,UAAO,GAAG;IAENA,OAAOA,CAACA,MAAMA,CAACA,eAAeA,EAAEA,EAAEA,CAACA;AAEvCA,CAACA,qBAAA"}
+{"version":3,"file":"logger.module.js","sourceRoot":"","sources":["logger.module.ts"],"names":["app"],"mappings":"AAAA,sCAAsC;AAEtC,YAAY,CAAC;AACb,IAAO,GAAG,CAIT;AAJD,WAAO,GAAG,EAAC,CAAC;IAERA,OAAOA,CAACA,MAAMA,CAACA,eAAeA,EAAEA,EAAEA,CAACA,CAACA;AAExCA,CAACA,EAJM,GAAG,KAAH,GAAG,QAIT"}

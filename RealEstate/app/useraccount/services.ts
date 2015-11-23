@@ -31,7 +31,7 @@ module app.useraccount.services {
             var deferred = self.qService.defer();
             model.grant_type = 'password';
             model.client_id = 'app';
-            var config: ng.IRequestConfig = {                 
+            var config = {                 
                 url: 'token',                 
                 dataType: 'json',
                 method: 'POST',
@@ -60,7 +60,7 @@ module app.useraccount.services {
         $register(model: models.Register): ng.IPromise<any> {
             var self = this;
             var deferred = self.qService.defer();            
-            var config: ng.IRequestConfig = {
+            var config = {
                 url: 'api/account/Register',
                 dataType: 'json',
                 method: 'POST',
@@ -83,7 +83,7 @@ module app.useraccount.services {
         $userInfo(): ng.IPromise<any> {
             var self = this;
             var deferred = self.qService.defer();
-            var config: ng.IRequestConfig = {
+            var config = {
                 url: 'api/account/UserInfo',
                 dataType: 'json',
                 method: 'GET' //we are passing token header with the injector
@@ -109,7 +109,7 @@ module app.useraccount.services {
             model.grant_type = 'refresh_token';
             model.client_id = 'app';
 
-            var config: ng.IRequestConfig = {
+            var config = {
                 url: 'token',
                 dataType: 'json',
                 method: 'POST',

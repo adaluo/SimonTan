@@ -1,10 +1,10 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var about;
     (function (about) {
         angular.module('app.about', []);
-    })(app.about || (app.about = {}));
-    var about = app.about;
+    })(about = app.about || (app.about = {}));
 })(app || (app = {}));
 //# sourceMappingURL=about.module.js.map

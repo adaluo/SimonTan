@@ -1,4 +1,4 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 var app;
 (function (app) {
     angular.module('app.core').config(toastrConfig);
@@ -7,13 +7,11 @@ var app;
         toastr.options.timeOut = 4000;
         toastr.options.positionClass = 'toast-bottom-right';
     }
-
     var config = {
         appTitle: 'Angular Typescript Template',
         version: '1.0.0'
     };
     angular.module('app.core').value('config', config);
-
     angular.module('app.core').config(configureTranslation);
     configureTranslation.$inject = ['$i18nextProvider'];
     function configureTranslation($i18nextProvider) {
@@ -29,7 +27,7 @@ var app;
             //dynamicLoad: false,
             getAsync: true,
             resGetPath: '/api/translate/__lng__/',
-            defaultLoadingValue: ''
+            defaultLoadingValue: '' // ng-i18next option, *NOT* directly supported by i18next
         };
     }
 })(app || (app = {}));

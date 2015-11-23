@@ -1,15 +1,16 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 var app;
 (function (app) {
+    var test;
     (function (test) {
         'use strict';
-
-        angular.module('app.test').config(UserAccountConfig);
-
+        angular.
+            module('app.test').
+            config(UserAccountConfig);
         UserAccountConfig.$inject = ['$stateProvider'];
-
         function UserAccountConfig($stateProvider) {
-            $stateProvider.state("test", {
+            $stateProvider.
+                state("test", {
                 url: "/test",
                 templateUrl: '/app/test/test.html',
                 controller: function ($scope) {
@@ -17,7 +18,6 @@ var app;
                 }
             });
         }
-    })(app.test || (app.test = {}));
-    var test = app.test;
+    })(test = app.test || (app.test = {}));
 })(app || (app = {}));
 //# sourceMappingURL=config.route.js.map

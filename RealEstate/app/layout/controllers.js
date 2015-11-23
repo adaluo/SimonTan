@@ -1,7 +1,8 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var layout;
     (function (layout) {
         var LayoutController = (function () {
             function LayoutController($timeout, logger, $scope, $location, accountService, $interval, NotifyingCache, $i18next) {
@@ -21,7 +22,6 @@ var app;
                     self.fetchingRefreshToken = true;
                     model.username = self.tokenData.userName;
                     model.refresh_token = self.tokenData.refresh_token;
-
                     self.dataSvc.$refresh(model).then(function (data) {
                         self.tokenData = data;
                         self.logger.success(self.i18next('sessionrefreshed'));
@@ -44,7 +44,6 @@ var app;
                 };
                 this.countdown = function () {
                     var self = this;
-
                     self.tokenData = self.notifyingCache.get(app.CONST.sessionStorageKey);
                     if (self.tokenData && self.isLoggedIn) {
                         var refreshId = self.interval(function () {
@@ -63,12 +62,11 @@ var app;
                 this.calculateExpiredSeconds = function () {
                     var self = this;
                     if (self.fetchingRefreshToken)
-                        return self.expiresIn;
+                        return self.expiresIn; //freeze time if refreshing token.
                     var sessionEndTime = moment.unix(self.tokenData.clientIssuedTime).add(self.tokenData.expires_in - app.CONST.sessionSlackTime, 'seconds');
                     return sessionEndTime.diff(moment(), 'seconds');
                 };
                 var self = this;
-
                 self.isLoggedIn = false;
                 self.logger = logger;
                 self.timeout = $timeout;
@@ -78,31 +76,25 @@ var app;
                 self.interval = $interval;
                 self.notifyingCache = NotifyingCache;
                 self.i18next = $i18next;
-
                 self.fetchingRefreshToken = false;
                 self.isBusy = true;
                 self.expiresInShow = false;
-
                 $scope.$on(app.EVENTS.loginSuccess, function (e, kvp) {
                     self.isLoggedIn = true;
                     self.countdown();
                 });
-
                 $scope.$on(app.EVENTS.loginRefreshTokenSuccess, function (e, kvp) {
                     self.expiresInShow = false;
                     self.fetchingRefreshToken = false;
                     self.isLoggedIn = true;
                     self.countdown();
                 });
-
                 $scope.$on(app.EVENTS.logoutSuccess, function (e, kvp) {
                     self.isLoggedIn = false;
                     self.expiresIn = null;
                 });
-
                 $scope.$on(app.EVENTS.i18LanguageChange, function () {
-                    self.title = self.i18next('applicationname'); //   config.appTitle;
-
+                    self.title = self.i18next('applicationname'); //   config.appTitle; 
                     //self.busyMessage = self.i18next('pleasewait') + ' ...';
                     self.logger.success(self.title + ' ' + self.i18next('loaded'), null);
                 });
@@ -111,8 +103,7 @@ var app;
             return LayoutController;
         })();
         layout.LayoutController = LayoutController;
-    })(app.layout || (app.layout = {}));
-    var layout = app.layout;
+    })(layout = app.layout || (app.layout = {}));
 })(app || (app = {}));
 angular.module('app.layout').controller('layoutController', app.layout.LayoutController);
 //# sourceMappingURL=controllers.js.map

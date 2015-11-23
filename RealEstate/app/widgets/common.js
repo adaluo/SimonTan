@@ -1,4 +1,4 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
@@ -19,24 +19,19 @@ var app;
                 str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
             return str.join("&");
         };
-
         common.capitaliseFirstLetter = function (str) {
             return str.charAt(0).toUpperCase() + str.slice(1);
         };
-
         common.lowercaseFirstLetter = function (str) {
             return str.charAt(0).toLowerCase() + str.slice(1);
         };
-
         common.textContains = function (text, searchText) {
             return text && -1 !== text.toLowerCase().indexOf(searchText.toLowerCase());
         };
-
         common.isNumber = function (val) {
-            // negative or positive
+            // negative or positive 
             return /^[-]?\d+$/.test(val);
         };
-
         //#endregion
         //#region dates
         common.prototype.addDays = function (date, days) {
@@ -47,7 +42,6 @@ var app;
         return common;
     })();
     app.common = common;
-
     //#region dictionary
     var Item = (function () {
         function Item(name, object) {
@@ -65,100 +59,91 @@ var app;
             if (value && typeof value != "undefined") {
                 this.items.push(value);
                 this.items[key] = value;
-            } else {
+            }
+            else {
                 app.log.error("Failed to add item to app cache (null) - " + key);
             }
         };
-
         Dictionary.prototype.getByIndex = function (index) {
             return this.items[index];
         };
-
         Dictionary.prototype.getByKey = function (key) {
             return this.items[key];
         };
         return Dictionary;
     })();
     app.Dictionary = Dictionary;
-
     //#endregion
     var log = (function () {
         function log() {
         }
         log.debug = function (message) {
             var optionalParams = [];
-            for (var _i = 0; _i < (arguments.length - 1); _i++) {
-                optionalParams[_i] = arguments[_i + 1];
+            for (var _i = 1; _i < arguments.length; _i++) {
+                optionalParams[_i - 1] = arguments[_i];
             }
             console.debug(message, optionalParams);
         };
-
         log.info = function (message) {
             var optionalParams = [];
-            for (var _i = 0; _i < (arguments.length - 1); _i++) {
-                optionalParams[_i] = arguments[_i + 1];
+            for (var _i = 1; _i < arguments.length; _i++) {
+                optionalParams[_i - 1] = arguments[_i];
             }
             console.info(message, optionalParams);
         };
-
         log.warn = function (message) {
             var optionalParams = [];
-            for (var _i = 0; _i < (arguments.length - 1); _i++) {
-                optionalParams[_i] = arguments[_i + 1];
+            for (var _i = 1; _i < arguments.length; _i++) {
+                optionalParams[_i - 1] = arguments[_i];
             }
             console.warn(message, optionalParams);
         };
-
         log.error = function (message) {
             var optionalParams = [];
-            for (var _i = 0; _i < (arguments.length - 1); _i++) {
-                optionalParams[_i] = arguments[_i + 1];
+            for (var _i = 1; _i < arguments.length; _i++) {
+                optionalParams[_i - 1] = arguments[_i];
             }
             console.error(message, optionalParams);
         };
-
         log.clear = function () {
             console.log(new Array(24 + 1).join("\n"));
         };
         return log;
     })();
     app.log = log;
-
     var InstanceLoader = (function () {
         function InstanceLoader() {
         }
         InstanceLoader.getInstance = function (context, name) {
             var args = [];
-            for (var _i = 0; _i < (arguments.length - 2); _i++) {
-                args[_i] = arguments[_i + 2];
+            for (var _i = 2; _i < arguments.length; _i++) {
+                args[_i - 2] = arguments[_i];
             }
             var instance = Object.create(context[name].prototype);
             instance.constructor.apply(instance, args);
             return instance;
         };
-
         InstanceLoader.create = function () {
             return {};
         };
         return InstanceLoader;
     })();
     app.InstanceLoader = InstanceLoader;
-
     var Describer = (function () {
         function Describer() {
         }
         Describer.getName = function (ent) {
             if (typeof ent == "string")
                 return ent;
-
             if (ent.constructor && ent.constructor.name != "Function") {
                 return ent.constructor.name || (ent.toString().match(/function (.+?)\(/) || [, ''])[1];
-            } else {
+            }
+            else {
                 return ent.name;
             }
-            //var funcNameRegex = /function (.{1,})\(/;
-            //var results = (funcNameRegex).exec((<any> inputClass).constructor.toString());
-            //return (results && results.length > 1) ? results[1] : "";
+            //var funcNameRegex = /function (.{1,})\(/; 
+            //var results = (funcNameRegex).exec((<any> inputClass).constructor.toString()); 
+            //return (results && results.length > 1) ? results[1] : ""; 
         };
         return Describer;
     })();

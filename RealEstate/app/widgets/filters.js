@@ -1,7 +1,8 @@
-﻿/// <reference path="../_all.ts" />
+/// <reference path="../_all.ts" />
 'use strict';
 var app;
 (function (app) {
+    var widgets;
     (function (widgets) {
         var ToLowerCaseFilter = (function () {
             function ToLowerCaseFilter() {
@@ -18,8 +19,7 @@ var app;
             return ToLowerCaseFilter;
         })();
         widgets.ToLowerCaseFilter = ToLowerCaseFilter;
-    })(app.widgets || (app.widgets = {}));
-    var widgets = app.widgets;
+    })(widgets = app.widgets || (app.widgets = {}));
 })(app || (app = {}));
 angular.module('app.widgets').filter("tolowercase", [app.widgets.ToLowerCaseFilter.Factory]);
 //# sourceMappingURL=filters.js.map
