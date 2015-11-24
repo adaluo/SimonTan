@@ -9,6 +9,7 @@ module app {
          * We could place these under every feature area,
          * but this is easier to maintain.
          */ 
+     
         'app.core',
         'app.widgets',
 
@@ -19,7 +20,8 @@ module app {
         'app.useraccount',
         'app.test',
         'app.about',
-        'app.listings'            
+        'app.listings',
+        'app.manage'           
     ]);
 
 }
