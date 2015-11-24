@@ -2,9 +2,9 @@
 
   <!-- featured property #1 details start here -->
   <div id="property-item1" class="property-item">
-    <div class="wide-divider">
+    <!--<div class="wide-divider">
       <a class="close-details" href="/#/listings"></a>
-    </div>
+    </div>-->
     <div class="inner-block">
 
       <div class="row">
@@ -106,7 +106,7 @@
               <li><a class="styler_bg_color" href="#tab-map" data-toggle="tab">MAP</a></li>
             </ul>
             <div class="tab-content tabs_blocks">
-              <div class="active" id="details1">
+              <div id="details1">
                 <!-- featured listings house #1 property details tab info slides start here -->
                 <ul class="info_slides">
                   <li class="active">
@@ -352,7 +352,7 @@
                 </ul>
               </div>
               <!-- edit featured listings house #1 map tab info here -->
-              <div class="tab-map">
+              <div class="tab-map" >
                 <!-- begin map -->
                 <div class="map" data-coordinates="32.83823,-96.775347" data-title="5321 E Mockingbird Ln, Dallas, TX 75206"></div>
                 <!-- /end map -->
@@ -366,3 +366,73 @@
 
 
 </div>
+
+<script>
+
+  rsSlider($('.royalSlider'));
+
+  function rsSlider(slider) {
+    slider.royalSlider({
+      fullscreen: {
+        enabled: false,
+        nativeFS: true
+      },
+      controlNavigation: 'thumbnails',
+      autoScaleSlider: true,
+      autoScaleSliderWidth: 960,
+      autoScaleSliderHeight: 850,
+      loop: false,
+      imageScaleMode: 'fit',
+      navigateByClick: true,
+      numImagesToPreload: 2,
+      arrowsNav: true,
+      arrowsNavAutoHide: true,
+      arrowsNavHideOnTouch: true,
+      keyboardNavEnabled: true,
+      fadeinLoadedSlide: true,
+      globalCaption: false,
+      globalCaptionInside: false,
+      thumbs: {
+        appendSpan: true,
+        firstMargin: true
+      }
+    });
+    slider.addClass('rendered');
+  }
+
+
+  //map();
+  //function map() {
+  //  google.load('maps', '3', {
+  //    //other_params: 'sensor=false'
+  //  });
+  //}
+  //map_initialize($('div.map'));
+
+  //function map_initialize(mapBlock) {
+  //  mapBlock.each(function () {
+  //    var currMap = $(this);
+  //    var coordinates = $(this).data('coordinates').split(',');
+  //    var title = $(this).data('title');
+  //    var myMarker = new google.maps.LatLng(coordinates[0], coordinates[1]);
+
+  //    map = new google.maps.Map(this, {
+  //      zoom: 14,
+  //      scrollwheel: false,
+  //      center: myMarker,
+  //      disableDefaultUI: true,
+  //      mapTypeId: google.maps.MapTypeId.ROADMAP
+  //    });
+  //    var marker1 = new google.maps.Marker({
+  //      position: myMarker,
+  //      map: map,
+  //      title: title,
+  //      icon: '/content/img/map_marker2.png'
+  //    });
+  //    google.maps.event.addDomListener(window, 'resize', function () {
+  //      map.setCenter(myMarker);
+  //    });
+  //  });
+  //}
+
+</script>
