@@ -17,7 +17,7 @@ module app.about {
                 url: '/about',
                 controller: 'app.about.AboutController',
                 controllerAs: 'about',
-                templateUrl: '/app/about/About.html',
+                templateUrl: '/app/about/About.html'
             });
     }
 

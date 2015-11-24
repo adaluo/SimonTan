@@ -12,7 +12,7 @@
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/app/site.css" rel="stylesheet" />
     <link href="~/Content/animate.min.css" rel="stylesheet" />
-
+    <link href="~/vendor/angular-dialog-service/dist/dialogs.css" rel="stylesheet" />
 
     <link type="text/css" rel="stylesheet" href="~/Content/css/style.css" />
 
@@ -30,6 +30,11 @@
         html {
             visibility: visible;
         }
+
+        #container {
+   
+            min-height: 1000px;
+}
 
         .styler_color, .styler_hover_color:hover, .styler_parent_active.active > .styler_active_color {
             color: #a1a64a !important;
@@ -73,7 +78,7 @@
     <script src="~/Scripts/i18n/angular-locale_en-us.js"></script>
     <script src="~/Scripts/i18n/angular-locale_sr-cyrl.js"></script>
     <script src="~/Scripts/i18n/angular-locale_sr-latn.js"></script>
-
+   
 
     <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
     <script src="~/Scripts/angular-ui/ui-utils.min.js"></script>
@@ -81,7 +86,8 @@
 
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 
-
+    <script src="~/vendor/angular-dialog-service/dist/dialogs-default-translations.js"></script>
+    <script src="~/vendor/angular-dialog-service/dist/dialogs.js"></script>
 
     <script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="~/Content/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
@@ -152,9 +158,15 @@
 
     <script src="~/app/listings/listings.module.js"></script>
     <script src="~/app/listings/config.route.js"></script>
-    <script src="~/app/listings/controllers.js"></script>
+<script src="~/app/listings/controllers.js"></script>
 
-    <script src="~/app/layout/layout.module.js"></script>
+    <script src="~/app/core/baseController.js"></script>
+
+<script src="~/app/manage/manage.module.js"></script>
+    <script src="~/app/manage/config.route.js"></script>
+    <script src="~/app/manage/editDisplaycontroller.js"></script>
+
+<script src="~/app/layout/layout.module.js"></script>
     <script src="~/app/layout/controllers.js"></script>
 
     <script>

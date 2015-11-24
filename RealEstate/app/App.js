@@ -17,7 +17,8 @@ var app;
         'app.useraccount',
         'app.test',
         'app.about',
-        'app.listings'
+        'app.listings',
+        'app.manage'
     ]);
 })(app || (app = {}));
 //# sourceMappingURL=App.js.map
