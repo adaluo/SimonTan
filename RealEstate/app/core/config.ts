@@ -36,6 +36,7 @@ module app {
 
     }
 
+    
     //angular.module('app.core').config(configure);
 
     //function configure($logProvider, $routeProvider, routehelperConfigProvider, exceptionHandlerProvider) {

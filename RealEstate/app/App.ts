@@ -9,7 +9,7 @@ module app {
          * We could place these under every feature area,
          * but this is easier to maintain.
          */ 
-     
+        'ngResource',
         'app.core',
         'app.widgets',
 
