@@ -1,0 +1,27 @@
+﻿html {
+  visibility: visible;
+}
+
+#container {
+  min-height: 1000px;
+}
+
+.styler_color, .styler_hover_color:hover, .styler_parent_active.active > .styler_active_color {
+  color: #a1a64a !important;
+}
+
+.property-item:before {
+  display: none;
+}
+
+.property-item {
+  display: block;
+}
+
+  .property-item .inner-block {
+    opacity: inherit;
+  }
+
+.ui-view-container {
+  margin-top: 0;
+}

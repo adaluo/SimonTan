@@ -201,6 +201,7 @@
     <Content Include="Content\css\rs-default.css" />
     <Content Include="Content\css\rs-responsive.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\styleAngularFix.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
