@@ -1,1 +1,62 @@
-﻿<div>Edit Display</div>
+﻿<div class="wide-block">
+    <div class="table-responsive">
+        <table ng-table="vm.tableParams" class="table table-striped table-bordered table-hover">
+
+            <tr ng-repeat="item in $data">
+                <td data-title="'Resource Id'" sortable="'ResourceId'">{{(item.ResourceId === 0) && " " ||item.ResourceId}}</td>
+
+                <td data-title="'Code'" sortable="'ResourceCode'">
+                    <span editable-text="item.ResourceCode" e-ng-maxlength="50" e-name="ResourceCode" e-form="rowform" e-placeholder="Resource Code" e-required>
+                        {{item.ResourceCode  }}
+
+                    </span>
+                </td>
+                <td data-title="'Group'" sortable="'ResourceGroup'">
+                    <span editable-text="item.ResourceGroup" e-name="Group" e-form="rowform" e-placeholder="Group">
+                        {{item.ResourceGroup}}
+
+                    </span>
+                </td>
+                <td data-title="'English'" sortable="'English'">
+                    <span editable-text="item.English" e-name="English" e-form="rowform" e-placeholder="English" e-required>
+                        {{item.English}}
+                    </span>
+                </td>
+                <td data-title="'Chinese'" sortable="'Chinese'">
+                    <span editable-text="item.Chinese" e-name="Chinese" e-form="rowform" e-placeholder="Chinese" e-required>
+                        {{item.Chinese}}
+                    </span>
+                </td>
+               
+                <td data-title="'Actions'" class="text-center">
+                    <!-- form -->
+
+                    <form editable-form name="rowform" onbeforesave="vm.saveResource($data, item)" class="form-buttons form-inline" ng-show="rowform.$visible" shown="vm.inserteditem == item">
+
+                        <button class="btn btn-xs btn-success" type="submit" title="Save" ng-disabled="rowform.$waiting || rowform.$invalid">
+                            <i class="fa fa-save"></i>
+                        </button>
+                        <button class="btn btn-xs btn-warning" ng-disabled="rowform.$waiting" title="Cancel" type="button" ng-click="rowform.$cancel();vm.removeNewResource(item);">
+                            <i class="fa fa-times"></i>
+                        </button>
+
+                    </form>
+                    <div class="buttons" ng-show="!rowform.$visible">
+
+                        <button class="btn btn-xs btn-primary" title="Edit" ng-click="rowform.$show()">
+                            <i class="fa fa-pencil"></i>
+                        </button>
+
+
+
+                    </div>
+                </td>
+
+            </tr>
+
+
+
+        </table>
+    </div>
+
+</div>
